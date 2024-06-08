@@ -1,1 +1,1 @@
-# Cinema Guru Project
+# Cinema Guru Front-end
