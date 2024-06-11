@@ -9,13 +9,15 @@ const Input = ({ label, type, className, value, setValue, icon, inputAttributes 
 
 	return (
 		<div>
-			{icon && <FontAwesomeIcon icon={icon}></FontAwesomeIcon>}
-			<label htmlFor="input">{label}</label>
+			{icon && <FontAwesomeIcon
+				icon={icon}
+				className='faUser'>
+			</FontAwesomeIcon>}
+			<label htmlFor={inputAttributes.id} className='general-input-label'>{label}</label>
 			<input
 				type={type}
 				className={className}
 				value={value}
-				id='input'
 				onChange={handleInput}
 				{...inputAttributes}
 			/>
