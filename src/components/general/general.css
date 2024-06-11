@@ -1,0 +1,17 @@
+.faUser {
+	color: pink;
+	margin-right: 1%;
+}
+
+.general-input {
+	display: block;
+	margin-top: 1%;
+	border: none;
+	border-bottom: solid rgb(197, 0, 0) 1px;
+	width: 300px;
+
+}
+
+.general-input:focus {
+	outline: none;
+}
