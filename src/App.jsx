@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSpinner, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faSpinner, faUser } from '@fortawesome/free-solid-svg-icons';
 import Input from "./components/general/Input";
 import SelectInput from "./components/general/SelectInput";
 import Button from "./components/general/Button";
+import SearchBar from "./components/general/SearchBar";
 
-library.add(faUser, faSpinner)
+library.add(faUser, faSpinner, faSearch)
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
 	];
 	const [inputValue, setInputValue] = useState("");
 	const [selectInputValue, setSelectInputValue] = useState(selectOptions[0]);
+	const [title, setTitle] = useState("");
+
 	const handleButtonClick = () => {
 		alert("Button Clicked");
 	}
@@ -48,6 +51,12 @@ function App() {
 				onClick={handleButtonClick}
 				// icon={"fa-solid fa-spinner"}
 			></Button>
+			
+			<SearchBar 
+				title={title}
+				setTitle={setTitle}
+				icon={faSearch}
+			></SearchBar>
 		</div>
 	);
 }
