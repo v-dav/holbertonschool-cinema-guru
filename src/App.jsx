@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner, faUser } from '@fortawesome/free-solid-svg-icons';
 import Input from "./components/general/Input";
 import SelectInput from "./components/general/SelectInput";
+import Button from "./components/general/Button";
 
-library.add(faUser)
+library.add(faUser, faSpinner)
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
 	];
 	const [inputValue, setInputValue] = useState("");
 	const [selectInputValue, setSelectInputValue] = useState(selectOptions[0]);
+	const handleButtonClick = () => {
+		alert("Button Clicked");
+	}
 
 	return (
 		<div className="App">
@@ -38,6 +42,12 @@ function App() {
 			>
 
 			</SelectInput>
+			<Button
+				label={"Load More..."}
+				className={"button"}
+				onClick={handleButtonClick}
+				// icon={"fa-solid fa-spinner"}
+			></Button>
 		</div>
 	);
 }

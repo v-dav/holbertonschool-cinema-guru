@@ -16,3 +16,13 @@
 	outline: none;
 }
 
+.button {
+	border: none;
+	background-color: rgb(197, 0, 0);
+	color: white;
+	font-size: 16px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 1%;
+}
