@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './auth.css'
 import Button from '../../components/general/Button';
 import Login from './Login';
+import Register from './Register';
 
 const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
 	const [_switch, setSwitch] = useState(true);
@@ -25,12 +26,21 @@ const Authentication = ({ setIsLoggedIn, setUserUsername }) => {
 						onClick={(e) => { e.preventDefault(); setSwitch(false); setActiveButton('signUp') }}>
 					</Button>
 				</form>
-				<Login
-					username={username}
-					password={password}
-					setUsername={setUsername}
-					setPassword={setPassword}
-				></Login>
+				{_switch ? (
+					<Login
+						username={username}
+						password={password}
+						setUsername={setUsername}
+						setPassword={setPassword}
+					/>
+				) : (
+					<Register
+						username={username}
+						password={password}
+						setUsername={setUsername}
+						setPassword={setPassword}
+					/>
+				)}
 			</div>
 
 		</>
