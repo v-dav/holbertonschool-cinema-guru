@@ -7,6 +7,7 @@ import Button from "./components/general/Button";
 import SearchBar from "./components/general/SearchBar";
 import axios from "axios";
 import './App.css';
+import Authentication from "./routes/auth/Authentication";
 
 library.add(faUser, faSpinner, faSearch)
 
@@ -86,7 +87,9 @@ function App() {
 			</div>
 		);
 	} else {
-		return <h1>Authentication component</h1>
+		return (
+			<Authentication></Authentication>
+		)
 	}
 }
 
