@@ -7,7 +7,7 @@ import Button from '../../components/general/Button'
 const Register = ({ username, password, setUsername, setPassword }) => {
 	return (
 		<>
-			<form action="" className='login-form'>
+			<div className='login-form'>
 				<h3>Create a new account</h3>
 				<Input
 					label={"Username:"}
@@ -31,8 +31,9 @@ const Register = ({ username, password, setUsername, setPassword }) => {
 					label={"Sign Up"}
 					className={"button signin-submit-button"}
 					icon={"fa-solid fa-plus"}
+					type="submit"
 				></Button>
-			</form>
+			</div>
 
 		</>
 	)

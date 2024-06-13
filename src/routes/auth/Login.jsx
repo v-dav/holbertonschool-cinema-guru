@@ -7,7 +7,7 @@ import Button from '../../components/general/Button'
 const Login = ({ username, password, setUsername, setPassword }) => {
 	return (
 		<>
-			<form action="" className='login-form'>
+			<div className='login-form'>
 				<h3>Sign in with your account</h3>
 				<Input
 					label={"Username:"}
@@ -31,8 +31,9 @@ const Login = ({ username, password, setUsername, setPassword }) => {
 					label={"Sign In"}
 					className={"button signin-submit-button"}
 					icon={"fa-solid fa-key"}
+					type="submit"
 				></Button>
-			</form>
+			</div>
 
 		</>
 	)
