@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faKey, faSearch, faSpinner, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faKey, faPlus, faSearch, faSpinner, faUser } from '@fortawesome/free-solid-svg-icons';
 import Input from "./components/general/Input";
 import SelectInput from "./components/general/SelectInput";
 import Button from "./components/general/Button";
@@ -9,7 +9,7 @@ import axios from "axios";
 import './App.css';
 import Authentication from "./routes/auth/Authentication";
 
-library.add(faUser, faSpinner, faSearch, faKey)
+library.add(faUser, faSpinner, faSearch, faKey, faPlus)
 
 
 function App() {
