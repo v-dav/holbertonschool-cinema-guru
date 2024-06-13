@@ -1,0 +1,8 @@
+.signin-button, .signup-button {
+	cursor: pointer;
+	background-color: #940707; /* Active color */
+}
+
+.active {
+	background-color: red;
+}
