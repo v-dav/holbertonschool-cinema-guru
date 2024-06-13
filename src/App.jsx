@@ -30,7 +30,7 @@ function App() {
 	useEffect(() => {
 		const accessToken = localStorage.getItem('accessToken');
 		if (accessToken) {
-			axios.post('/api/auth', {}, {
+			axios.post('http://localhost:8000/api/auth', {}, {
 				headers: {
 					'Content-Type': 'application/json',
 					'Authorization': `Bearer ${accessToken}`
@@ -38,7 +38,7 @@ function App() {
 			})
 				.then(response => {
 					setIsLoggedIn(true);
-					setUserUsername(response.username);
+					setUserUsername(response.data.username);
 				})
 				.catch(error => {
 					alert(error);
@@ -51,9 +51,16 @@ function App() {
 		alert("Button Clicked");
 	}
 
+	const handleLogout = () => {
+		localStorage.removeItem('accessToken');
+		setIsLoggedIn(false);
+		setUserUsername("");
+	}
+
 	if (isLoggedIn) {
 		return (
 			<div className="App">
+				<h1>Hello {userUsername}</h1>
 				<Input
 					label={"Username:"}
 					type={"text"}
@@ -84,11 +91,21 @@ function App() {
 					setTitle={setTitle}
 					icon={faSearch}
 				></SearchBar>
+
+				<Button
+					label={"Log Out"}
+					className={"button"}
+					onClick={handleLogout}
+				// icon={"fa-solid fa-spinner"}
+				></Button>
 			</div>
 		);
 	} else {
 		return (
-			<Authentication></Authentication>
+			<Authentication
+				setIsLoggedIn={setIsLoggedIn}
+				setUserUsername={setUserUsername}
+			></Authentication>
 		)
 	}
 }
