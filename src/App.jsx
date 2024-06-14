@@ -7,7 +7,8 @@ import SearchBar from "./components/general/SearchBar";
 import axios from "axios";
 import './App.css';
 import Authentication from "./routes/auth/Authentication";
-import Header from "./components/navigation/Header";
+import Dashboard from "./routes/dashboard/Dashboard";
+
 
 library.add(faUser, faSpinner, faSearch, faKey, faPlus, faRightFromBracket)
 
@@ -53,7 +54,7 @@ function App() {
 	if (isLoggedIn) {
 		return (
 			<div className="App">
-				<Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}></Header>
+				<Dashboard userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}></Dashboard>
 				<SelectInput
 					label={"Sort:"}
 					options={selectOptions}
