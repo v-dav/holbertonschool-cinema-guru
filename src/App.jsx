@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faKey, faPlus, faRightFromBracket, faSearch, faSpinner, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faFolder, faKey, faPlus, faRightFromBracket, faSearch, faSpinner, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
 import SelectInput from "./components/general/SelectInput";
 import Button from "./components/general/Button";
 import SearchBar from "./components/general/SearchBar";
@@ -10,7 +10,15 @@ import Authentication from "./routes/auth/Authentication";
 import Dashboard from "./routes/dashboard/Dashboard";
 
 
-library.add(faUser, faSpinner, faSearch, faKey, faPlus, faRightFromBracket)
+library.add(
+	faUser,
+	faSpinner,
+	faSearch, faKey,
+	faPlus,
+	faRightFromBracket,
+	faFolder,
+	faStar,
+	faClock)
 
 
 function App() {
