@@ -30,3 +30,32 @@ nav {
 .logout-icon {
 	margin-right: 5px;
 }
+
+.sidebar {
+	background-color: rgb(197, 0, 0);
+	width: 50px;
+	transition: width 0.3s ease;
+	height: 100%;
+	z-index: 1000;
+}
+
+.sidebar:hover {
+	width: 200px;
+}
+
+.page-navigation {
+	list-style: none;
+	margin-left: 15px;
+}
+
+
+.linktopage-button {
+	min-width: 200px;
+	text-align: left;
+	justify-content: start;
+	width: 100%;
+}
+
+.activity-list {
+	
+}
